@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Parallax Scrolling Website</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">LOGO</a>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact </a></li>
+      </ul>
+    </header>
+    <section>
+      <img src="images/stars.png" id="stars" />
+      <img src="images/moon.png" id="moon" />
+      <img src="images/mountains_behind.png" id="mountains_behind" />
+      <h2 id="text">Moonlight</h2>
+      <a href="#sec" class="btn">Explore</a>
+      <img src="images/mountains_front.png" id="mountain_front" />
+    </section>
+    <div class="sec" id="sec">
+      <h2>Parallax Scroll Effect</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt mollitia porro velit similique inventore accusantium ab aliquam praesentium cumque doloremque ullam neque commodi, dolorem atque dolor voluptate error veritatis
+        earum! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis velit maiores fugiat ipsam ea repudiandae odio iure, vero accusamus explicabo incidunt nisi vitae quam? Sapiente reiciendis magni illum voluptate itaque? Lorem
+        ipsum dolor, sit amet consectetur adipisicing elit. Eius iste odit magni amet nulla, ipsam quas consectetur deserunt ipsa ipsum ea sequi perspiciatis assumenda vitae aspernatur aliquam. Sit, magni officiis? <br /><br />
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias architecto sunt aperiam id. Odio rerum esse nesciunt alias tempore cupiditate, facere dicta provident totam id, aperiam ex iusto neque blanditiis?Lorem ipsum dolor
+        sit amet consectetur adipisicing elit. Reprehenderit numquam, officiis quam ratione temporibus consectetur, quia voluptas beatae nemo quisquam fugiat? Consequuntur nam repellendus et. Excepturi enim impedit officia ipsam.
+        <br /><br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis vel voluptatum omnis voluptas delectus! Maiores, dolorem. Neque velit necessitatibus optio at perferendis vero autem incidunt, repellendus quod
+        perspiciatis? Nemo, sint. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque veritatis, minus totam at iure soluta quisquam suscipit ducimus rerum et illum error cum perferendis dignissimos reprehenderit aliquid eius
+        aspernatur delectus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente autem atque alias, aliquid vero sunt debitis magni? Asperiores modi obcaecati numquam voluptatum minima, debitis saepe sapiente hic dolor vel
+        enim!<br /><br />
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias architecto sunt aperiam id. Odio rerum esse nesciunt alias tempore cupiditate, facere dicta provident totam id, aperiam ex iusto neque blanditiis?Lorem ipsum dolor
+        sit amet consectetur adipisicing elit. Reprehenderit numquam, officiis quam ratione temporibus consectetur, quia voluptas beatae nemo quisquam fugiat? Consequuntur nam repellendus et. Excepturi enim impedit officia ipsam.
+        <br /><br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis vel voluptatum omnis voluptas delectus! Maiores, dolorem. Neque velit necessitatibus optio at perferendis vero autem incidunt, repellendus quod
+        perspiciatis? Nemo, sint. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque veritatis, minus totam at iure soluta quisquam suscipit ducimus rerum et illum error cum perferendis dignissimos reprehenderit aliquid eius
+        aspernatur delectus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente autem atque alias, aliquid vero sunt debitis magni? Asperiores modi obcaecati numquam voluptatum minima, debitis saepe sapiente hic dolor vel
+        enim!<br /><br />
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias architecto sunt aperiam id. Odio rerum esse nesciunt alias tempore cupiditate, facere dicta provident totam id, aperiam ex iusto neque blanditiis?Lorem ipsum dolor
+        sit amet consectetur adipisicing elit. Reprehenderit numquam, officiis quam ratione temporibus consectetur, quia voluptas beatae nemo quisquam fugiat? Consequuntur nam repellendus et. Excepturi enim impedit officia ipsam.
+        <br /><br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis vel voluptatum omnis voluptas delectus! Maiores, dolorem. Neque velit necessitatibus optio at perferendis vero autem incidunt, repellendus quod
+        perspiciatis? Nemo, sint. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque veritatis, minus totam at iure soluta quisquam suscipit ducimus rerum et illum error cum perferendis dignissimos reprehenderit aliquid eius
+        aspernatur delectus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente autem atque alias, aliquid vero sunt debitis magni? Asperiores modi obcaecati numquam voluptatum minima, debitis saepe sapiente hic dolor vel
+        enim!
+      </p>
+    </div>
+
+    <script>
+      let stars = document.getElementById('stars');
+      let moon = document.getElementById('moon');
+      let mountains_behind = document.getElementById('mountains_behind');
+      let text = document.getElementById('text');
+      let btn = document.getElementById('btn');
+      let mountain_front = document.getElementById('mountain_front');
+
+      window.addEventListener('scroll', function () {
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + 'px';
+        moon.style.top = value * 1.05 + 'px';
+        mountains_behind.style.top = value * 0.5 + 'px';
+        mountains_front.style.top = value * 0 + 'px';
+        text.style.right = value * 4 + 'px';
+      });
+    </script>
+  </body>
+</html>
